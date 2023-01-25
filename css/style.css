@@ -1,0 +1,97 @@
+* {
+    /* background: #1b1b23 !important; */
+    background: #1f1f2a !important;
+    color: ghostwhite !important;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a23 !important;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #107df2 !important;
+}
+
+
+.btn {
+   width: 20%;
+   height: 35px;
+   margin-top: 30px;
+   cursor: pointer;
+   font-family: Microsoft Uighur;
+    letter-spacing: 0.5px;
+    font-size: 27px;
+    word-spacing: 5px;
+    font-weight: 100;
+    text-shadow: #4805b4  2px 2px;
+    border: rgb(233, 235, 240) solid 1px !important;
+    border-radius: 20px 0px 20px 0px;
+}
+
+a {
+    font-family: Optima !important;
+    font-weight: 400 !important;
+    /* background-color: #1a1a23 !important; */
+}
+
+::placeholder {
+    color: rgb(197, 185, 185) !important;
+}
+
+input,
+textarea {
+    border-radius: 0% !important;
+    /* border: solid 1px #e50000 !important; */
+    outline: 0px !important;
+    border: none;
+    border-bottom: solid 1px  #d5fb00 !important;
+    --webkit-appearance: none;
+    box-shadow: none !important;
+    margin-top: 10px !important;
+    color: whitesmoke !important;
+    width: 20%;
+    height: 25px;
+    font-family: Century Gothic;
+    transition:cubic-bezier(0.075, 0.82, 0.165, 1);
+    margin-top: 40px !important;
+    padding: 5px;
+}
+.row-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 5px;
+}
+
+input:focus {
+    border-color:  #4400ff !important; 
+    transition:cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+textarea:focus {
+    border-color: #10f2d0 !important;
+}
+.form-label{
+    text-shadow: #4805b4  2px 2px;
+}
+.btn{
+    background-color: #4805b4;
+}
+
+.text-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* font-family: Leelawadee UI; */
+    font-family: Microsoft Uighur;
+    letter-spacing: 0.5px;
+    font-size: 33px;
+    word-spacing: 5px;
+    font-weight: 100;
+    text-shadow: #4805b4  2px 2px;
+}
