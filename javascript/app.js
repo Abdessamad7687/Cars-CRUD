@@ -20,4 +20,4 @@ class Car {
 }
 
 let car = new Car("BMW", "Black", 220, 2000000)
-console.log(car);
+console.log(car)
