@@ -1,3 +1,6 @@
+let Cars = []
+const create = document.querySelector('#create')
+
 class Car {
     constructor(name, color, speed, price) {
         this.name = name;
@@ -19,5 +22,7 @@ class Car {
     }
 }
 
-let car = new Car("BMW", "Black", 220, 2000000)
-console.log(car)
+
+
+
+create.addEventListener('click', add, true)
