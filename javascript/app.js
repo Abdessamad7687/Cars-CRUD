@@ -14,8 +14,8 @@ class Car {
         this.s = s;
         this.p = p;
     }
-    static add(event) {
-        const newCar = new Car(color.value, speed.value, price.value, price.value)
+    static add() {
+        const newCar = new Car(name.value, color.value, speed.value, price.value)
         console.log(newCar)
     }
     remove() {
@@ -25,7 +25,9 @@ class Car {
 
     }
     display(){
+        let table = ''
         
+        var tbody = document.querySelector('tbody')
     }
 }
 
