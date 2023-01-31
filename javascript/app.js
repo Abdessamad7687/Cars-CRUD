@@ -16,7 +16,9 @@ class Car {
     }
     static add() {
         const newCar = new Car(name.value, color.value, speed.value, price.value)
-        console.log(newCar)
+        Cars.push(newCar)
+        console.log(Cars)
+        Car.display()
     }
     remove() {
 
@@ -29,12 +31,12 @@ class Car {
         for (let index = 0; index < Cars.length; index++) {
             table += `
             <tr>
-            <th scope="row">1</th>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
-            <td>
+                <th scope="row">${index}</th>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                <td>
                 <!-- edit button-->
                 <button>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="yellow"
@@ -56,15 +58,18 @@ class Car {
             </td>
         </tr>
             `
-
         }
 
-        var tbody = document.querySelector('tbody')
+        var tbody = document.getElementById('tbody')
         tbody.innerHTML = table
     }
 }
 
 
 
+
+create.addEventListener('click', function (e) {
+    Car.add()
+    e.preventDefault()
+})
 Car.display()
-create.addEventListener('click', Car.add())
