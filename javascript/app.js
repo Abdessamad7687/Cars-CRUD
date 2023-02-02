@@ -60,7 +60,7 @@ class Car {
             `
         }
 
-        var tbody = document.getElementById('tbody')
+        const tbody = document.getElementById('tbody')
         tbody.innerHTML = table
     }
 }
