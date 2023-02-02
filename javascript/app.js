@@ -1,4 +1,14 @@
-let Cars = []
+
+let Cars 
+
+if(localStorage.Cars != null){
+    Cars = JSON.parse(localStorage.getItem('Cars'))
+}
+else{
+    Cars = []
+}
+
+
 const create = document.querySelector('#create')
 
 const name = document.getElementById('name'),
@@ -17,6 +27,7 @@ class Car {
     static add() {
         const newCar = new Car(name.value, color.value, speed.value, price.value)
         Cars.push(newCar)
+        localStorage.setItem('Cars', JSON.stringify(Cars))
         console.log(Cars)
         Car.display()
     }
@@ -26,8 +37,8 @@ class Car {
     update() {
 
     }
-    getName(){   return this.n}
-    getColor(){ return this.c}
+    getName(){      return this.n}
+    getColor(){     return this.c}
     getSpeed(){     return this.s}
     getPrice(){     return this.p}
 
@@ -37,10 +48,10 @@ class Car {
             table += `
             <tr>
                 <th scope="row">${index}</th>
-                    <td>${Cars[index].getName()}</td>
-                    <td>${Cars[index].getColor()}</td>
-                    <td>${Cars[index].getSpeed()}</td>
-                    <td>${Cars[index].getPrice()}</td>
+                    <td>${Cars[index].n}</td>
+                    <td>${Cars[index].c}</td>
+                    <td>${Cars[index].s}</td>
+                    <td>${Cars[index].p}</td>
                 <td>
                 <!-- edit button-->
                 <button>
@@ -69,9 +80,6 @@ class Car {
         tbody.innerHTML = table
     }
 }
-
-
-
 
 create.addEventListener('click', function (e) {
     Car.add()
