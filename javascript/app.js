@@ -26,13 +26,14 @@ class Car {
     update() {
 
     }
+    getName(){   return this.name}
     static display() {
         let table = ''
         for (let index = 0; index < Cars.length; index++) {
             table += `
             <tr>
                 <th scope="row">${index}</th>
-                    <td>1</td>
+                    <td>${Cars[index].getName()}</td>
                     <td>1</td>
                     <td>1</td>
                     <td>1</td>
