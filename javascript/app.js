@@ -37,10 +37,10 @@ class Car {
     update() {
 
     }
-    getName(){      return this.n}
-    getColor(){     return this.c}
-    getSpeed(){     return this.s}
-    getPrice(){     return this.p}
+    // getName(){      return this.n}
+    // getColor(){     return this.c}
+    // getSpeed(){     return this.s}
+    // getPrice(){     return this.p}
 
     static display() {
         let table = ''
