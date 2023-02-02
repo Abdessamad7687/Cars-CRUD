@@ -26,7 +26,11 @@ class Car {
     update() {
 
     }
-    getName(){   return this.name}
+    getName(){   return this.n}
+    getColor(){ return this.c}
+    getSpeed(){     return this.s}
+    getPrice(){     return this.p}
+
     static display() {
         let table = ''
         for (let index = 0; index < Cars.length; index++) {
@@ -34,9 +38,9 @@ class Car {
             <tr>
                 <th scope="row">${index}</th>
                     <td>${Cars[index].getName()}</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
+                    <td>${Cars[index].getColor()}</td>
+                    <td>${Cars[index].getSpeed()}</td>
+                    <td>${Cars[index].getPrice()}</td>
                 <td>
                 <!-- edit button-->
                 <button>
