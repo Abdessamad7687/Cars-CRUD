@@ -47,11 +47,11 @@ class Car {
         for (let index = 0; index < Cars.length; index++) {
             table += `
             <tr>
-                <th scope="row">${index}</th>
+                <th scope="row">${index + 1}</th>
                     <td>${Cars[index].n}</td>
                     <td>${Cars[index].c}</td>
-                    <td>${Cars[index].s}</td>
-                    <td>${Cars[index].p}</td>
+                    <td>${Cars[index].s} KM/H</td>
+                    <td>${Cars[index].p} $</td>
                 <td>
                 <!-- edit button-->
                 <button>
