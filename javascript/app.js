@@ -35,9 +35,9 @@ class Car {
 
     static delete(i) {
         console.log(i)
-        // Cars.splice(i, 1)
-        // localStorage.setItem('Cars', JSON.stringify(Cars))
-        // Cars.display()
+        Cars.splice(i, 1)
+        localStorage.setItem('Cars', JSON.stringify(Cars))
+        Car.display()
     }
 
     update() { }
