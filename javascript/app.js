@@ -34,9 +34,10 @@ class Car {
     }
 
     static delete(i) {
-        Cars.splice(i, 1)
-        localStorage.setItem('Cars', JSON.stringify(Cars))
-        Cars.display()
+        console.log(i)
+        // Cars.splice(i, 1)
+        // localStorage.setItem('Cars', JSON.stringify(Cars))
+        // Cars.display()
     }
 
     update() { }
@@ -66,7 +67,7 @@ class Car {
                     </svg>
                 </button>
                 <!-- delete button-->
-                <button onClick="delete(${index})">
+                <button onClick="Car.delete(${index})">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red"
                         class="bi bi-trash" viewBox="0 0 16 16">
                         <path
