@@ -1,10 +1,10 @@
 
-let Cars 
+let Cars
 
-if(localStorage.Cars != null){
+if (localStorage.Cars != null) {
     Cars = JSON.parse(localStorage.getItem('Cars'))
 }
-else{
+else {
     Cars = []
 }
 
@@ -24,6 +24,7 @@ class Car {
         this.s = s;
         this.p = p;
     }
+
     static add() {
         const newCar = new Car(name.value, color.value, speed.value, price.value)
         Cars.push(newCar)
@@ -31,12 +32,15 @@ class Car {
         console.log(Cars)
         Car.display()
     }
-    remove() {
 
+    static delete(i) {
+        Cars.splice(i, 1)
+        localStorage.setItem('Cars', JSON.stringify(Cars))
+        Cars.display()
     }
-    update() {
 
-    }
+    update() { }
+
     // getName(){      return this.n}
     // getColor(){     return this.c}
     // getSpeed(){     return this.s}
@@ -51,7 +55,7 @@ class Car {
                     <td>${Cars[index].n}</td>
                     <td>${Cars[index].c}</td>
                     <td>${Cars[index].s} KM/H</td>
-                    <td>${Cars[index].p} $</td>
+                    <td>${Cars[index].p}$</td>
                 <td>
                 <!-- edit button-->
                 <button>
@@ -62,7 +66,7 @@ class Car {
                     </svg>
                 </button>
                 <!-- delete button-->
-                <button>
+                <button onClick="delete(${index})">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red"
                         class="bi bi-trash" viewBox="0 0 16 16">
                         <path
@@ -80,6 +84,7 @@ class Car {
         tbody.innerHTML = table
     }
 }
+
 
 create.addEventListener('click', function (e) {
     Car.add()
