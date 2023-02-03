@@ -4,10 +4,6 @@ let Cars
 if (localStorage.Cars != null) {
     Cars = JSON.parse(localStorage.getItem('Cars'))
 }
-else {
-    Cars = []
-}
-
 
 const create = document.querySelector('#create')
 
@@ -42,15 +38,26 @@ class Car {
 
     update() { }
 
+    static clear() {
+        name.value = ""
+        color.value = ""
+        speed.value = ""
+        price.value = ""
+    }
+
     // getName(){      return this.n}
     // getColor(){     return this.c}
     // getSpeed(){     return this.s}
     // getPrice(){     return this.p}
 
     static display() {
-        let table = ''
-        for (let index = 0; index < Cars.length; index++) {
-            table += `
+        if (Cars.length == 0) {
+            tbody.innerHTML = "<h3 class='mt-5 text-center'>Nothing to display for the moment</h3>"
+        }
+        else {
+            let table = ''
+            for (let index = 0; index < Cars.length; index++) {
+                table += `
             <tr>
                 <th scope="row">${index + 1}</th>
                     <td>${Cars[index].n}</td>
@@ -79,16 +86,17 @@ class Car {
             </td>
         </tr>
             `
-        }
+            }
 
-        const tbody = document.getElementById('tbody')
-        tbody.innerHTML = table
+            const tbody = document.getElementById('tbody')
+            tbody.innerHTML = table
+        }
     }
 }
 
-
 create.addEventListener('click', function (e) {
     Car.add()
+    Car.clear()
     e.preventDefault()
 })
 Car.display()
