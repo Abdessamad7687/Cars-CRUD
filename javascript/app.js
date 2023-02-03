@@ -52,9 +52,7 @@ class Car {
 
     static display() {
         if (Cars.length == 0) {
-            tbody.innerHTML = "<div class='alert alert-warning' role='alert'>Nothing to show</div>"
             
-        
         }
         else {
             let table = ''
